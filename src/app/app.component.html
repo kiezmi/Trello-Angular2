@@ -1,0 +1,11 @@
+<header class="addList">
+  <input [(ngModel)]="listName" (keyup.enter)="addList(listName)">
+  <button type="button" (click)="addList(listName)">Add</button>
+</header>
+<section>
+  <div *ngFor="let list of listsArr">
+    <list [objectList]="list" [modelData]="listsArr"></list>
+  </div>
+</section>
+
+<!-- <pre>{{listsArr  | json}}</pre> -->
