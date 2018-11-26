@@ -1,0 +1,7 @@
+<div class="list">
+  <h1>{{objectList.nombre}}</h1>
+  <button type="button" (click)="delList(objectList)">delete List</button>
+  <input [(ngModel)]="taskName" (keyup.enter)="addTask(taskName)">
+  <button type="button" (click)="addTask(taskName)">Add</button>
+  <task [taskObject]="task" [tasks]="objectList.tareas" *ngFor="let task of objectList.tareas"></task>
+</div>
